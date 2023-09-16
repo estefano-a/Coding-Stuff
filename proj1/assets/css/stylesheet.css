@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    background-color: grey;
+    padding: 60px;
+    font-family: arial;
+    font-size: 50px;
+  }
+  
+  p {
+    color: white;
+    padding: 20px;
+    font-family: arial;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  p2 {
+    color: white;
+    padding: 25px;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: normal;
+  }
