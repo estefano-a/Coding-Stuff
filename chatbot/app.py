@@ -18,7 +18,7 @@ HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 # Define root domain to crawl
 domain = "C:/Users/estef/Desktop/Coding Stuff/chatbot/Questions/"
 full_url = "C:/Users/estef/Desktop/Coding Stuff/chatbot/Questions/"
-openai.api_key="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"
+openai.api_key="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"
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
