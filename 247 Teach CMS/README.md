@@ -1,0 +1,1 @@
+This code consists of a Contact Management System class which contains multiple methods that make up the system. THis includes addContact, deleteContact, addFriendship as well as many other methods. The second part of my code code is the main if statement. This is where contacts, friendships as well as friend reccomendations are stored.
