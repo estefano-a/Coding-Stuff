@@ -7,7 +7,6 @@ section1{
     font-weight: bold;
 }
 
-
 h1{
     font-family: Verdana;
     text-align: center;
@@ -22,7 +21,6 @@ body{
 body>*{
     padding-left: 6px;
 }
-
 
 form{
     font-size: 15;
@@ -45,3 +43,7 @@ li{
     display:inline-block;
 }
 
+form1{
+    font-weight: bold;
+    ;
+}
