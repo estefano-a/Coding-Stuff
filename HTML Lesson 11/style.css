@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 9px;
+}
+
+section1{
+    font-weight: bold;
+}
+
+
+h1{
+    font-family: Verdana;
+    text-align: center;
+}
+
+body{
+    font-family: Verdana;
+    background-color: #eaf0f3;
+    
+}
+
+body>*{
+    padding-left: 6px;
+}
+
+
+form{
+    font-size: 15;
+}
+
+header{
+    background-color: #30455c;
+    color: white;
+}
+
+li{
+    font-weight: bold;
+    font-size: large;
+}
+
+.star-rating{
+    width: 100px;
+    height: 20px;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F611574824396855597%2F&psig=AOvVaw0M6U7V-dT9VdgpFsTGHc9H&ust=1697837171057000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCNitqb6Gg4IDFQAAAAAdAAAAABAD");
+    display:inline-block;
+}
+
