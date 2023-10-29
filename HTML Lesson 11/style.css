@@ -14,7 +14,7 @@ header{
     padding: 50px;
 }
 
-.star-rating{
+.starrating{
     width: 100px;
     height: 20px;
     background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F611574824396855597%2F&psig=AOvVaw0M6U7V-dT9VdgpFsTGHc9H&ust=1697837171057000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCNitqb6Gg4IDFQAAAAAdAAAAABAD");
@@ -71,7 +71,8 @@ header h3{
 }
 
 .progress{
-    padding-top: 0px;
+    margin-left: 60px;
+    margin-top: 30px;
 }
 
 .modules{
@@ -132,8 +133,8 @@ header h3{
     padding-bottom: 20px;
 }
 
-.paymentForm label{
-    padding-top: 30px;
+.paymentMethod{
+    padding-top: 20px
 }
 
 .faq{
@@ -141,6 +142,35 @@ header h3{
     padding-top: 20px;
 }
 
-.fName{
-    padding-bottom: 1000px;
+.fields{
+    padding-bottom: 20px;
+}
+
+input{
+    outline: none;
+}
+
+.faqContact{
+   padding-left: 60px; 
+   padding-bottom: 100px;
+}
+
+.feedbackTitle{
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.updates{
+    padding-left: 60px;
+}
+
+.updatesForm{
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.feedback{
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 
 }

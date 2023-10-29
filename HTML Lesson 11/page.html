@@ -46,7 +46,7 @@
             terms of support for students. Overall, it's a decent introduction to robotics."</p>
 
         <p class="person">Bill G. ⭐⭐⭐⭐⭐</p>
-        <meter value="5" min="0" max="5" low="2" high="4" optimum="5" class="star-rating"></meter>
+        <meter value="5" min="0" max="5" low="2" high="4" optimum="5" class="starrating"></meter>
         <p class="paragraph">"Robotics for Beginners is an outstanding course! The instructors are passionate and
             knowledgeable, and the
             content
@@ -137,17 +137,20 @@
 
         <details>
             <summary class="sum">Q: What will I learn in the "Introduction to Robotics" module?</summary>
-            <p class="faq">A: In this module, you'll explore the history and evolution of robots, various types of robots and their
+            <p class="faq">A: In this module, you'll explore the history and evolution of robots, various types of
+                robots and their
                 applications, and the impact of robotics on society and industries.</p>
         </details>
 
         <br>
 
         <details>
-            <summary class="sum">Q: What can I expect to gain from the "Future of Robotics: Trends and Career Opportunities"
+            <summary class="sum">Q: What can I expect to gain from the "Future of Robotics: Trends and Career
+                Opportunities"
                 section?
             </summary>
-            <p class="faq">A: This module explores advanced robotics and AI integration, ethical considerations in robotics,
+            <p class="faq">A: This module explores advanced robotics and AI integration, ethical considerations in
+                robotics,
                 potential
                 career paths, and further learning resources to help you prepare for the future in this field.</p>
         </details>
@@ -156,7 +159,8 @@
 
         <details>
             <summary class="sum">Q: Are there any prerequisites for enrolling in this course?</summary>
-            <p class="faq">A: There are no strict prerequisites, but having a basic understanding of programming concepts can be
+            <p class="faq">A: There are no strict prerequisites, but having a basic understanding of programming
+                concepts can be
                 helpful.</p>
         </details>
 
@@ -168,44 +172,53 @@
 
     <form action="submit.php" method="post" class="paymentForm">
 
-        <label for="firstName" class="fName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+        <div class="fields">
+            <label for="firstName" class="fName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
 
-        <label for="lastName" class="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required>
+            <label for="lastName" class="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
 
-        <label for="phoneNumber" class="phonenum">Phone Number:</label>
-        <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required>
+            <label for="phoneNumber" class="phonenum">Phone Number:</label>
+            <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required>
+        </div>
 
         <p>Choose your preferred form of payment:</p>
-        <input type="radio" id="cc" name="cc" value="cc">
-        <label for="cc">Credit Card</label>
 
-        <input type="radio" id="dc" name="dc" value="dc">
-        <label for="dc">Debit Card</label>
+        <div class="paymentMethod">
+            <input type="radio" id="cc" name="cc" value="cc">
+            <label for="cc">Credit Card</label>
 
-        <label for="cardnumber">Card Number:</label>
-        <input type="cardnumber" id="cardnumber" name="cardnumber" required>
+            <input type="radio" id="dc" name="dc" value="dc">
+            <label for="dc">Debit Card</label>
+            
+            <br>
+            <br>
 
-        <input type="submit" value="Confirm Payment">
+            <label for="cardnumber">Card Number:</label>
+            <input type="cardnumber" id="cardnumber" name="cardnumber" required>
 
+            <input type="submit" value="Confirm Payment">
+        </div>
     </form>
 
     <br>
 
-    <h3>Get the latest updates about this course!</h3>
+    <h3 class="updates">Get the latest updates about this course!</h3>
 
-    <form2 action="submit.php" method="post">
+    <div class="updatesForm">
+        <form2 action="submit.php" method="post">
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
 
-    </form2>
+        </form2>
+    </div>
 
     <br>
 
@@ -214,29 +227,36 @@
     <!--This section of the page holds the ratings and reviews of the previous students-->
 
     <footer>
-        <h3>Leave some feedback for us!</h3>
+        <h3 class="feedbackTitle">Leave some feedback for us!</h3>
 
-        <form3>
-            <label for="dropdown">How did you hear about us?</label>
-            <select id="dropdown" name="options">
-                <option value="option1">A friend, family member, relative</option>
-                <option value="option2">Advertisement or promotion</option>
-                <option value="option3">Browsing the internet</option>
-            </select>
-        </form3>
+        <div class="feedback">
+            <form3>
+                <label for="dropdown">How did you hear about us?</label>
+                <select id="dropdown" name="options">
+                    <option value="option1">A friend, family member, relative</option>
+                    <option value="option2">Advertisement or promotion</option>
+                    <option value="option3">Browsing the internet</option>
+                </select>
+            </form3>
+        </div>
 
-        <form>
-            <p>Choose your preferred form of contact:</p>
+        <div class="faqContact">
+            <form>
+                <p class="paymentMethod">Choose your preferred form of contact:</p>
 
-            <input type="radio" id="email" name="contact" value="email">
-            <label for="email">Email</label>
+                <br>
 
-            <input type="radio" id="text" name="contact" value="text">
-            <label for="text">Text</label>
+                <input type="radio" id="email" name="contact" value="email">
+                <label for="email">Email</label>
 
-            <input type="radio" id="call" name="contact" value="call">
-            <label for="call">Call</label>
-        </form>
+                <input type="radio" id="text" name="contact" value="text">
+                <label for="text">Text</label>
+
+                <input type="radio" id="call" name="contact" value="call">
+                <label for="call">Call</label>
+            </form>
+        </div>
+
     </footer>
 
 </body>
