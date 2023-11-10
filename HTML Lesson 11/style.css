@@ -3,6 +3,8 @@ h1 {
     text-align: center;
 }
 
+.nav-icon { transition: all 1s ease; } .nav-icon:hover { transform: scale(.9); }
+
 body {
     font-family: Verdana;
     background-color: #eaf0f3;
@@ -119,18 +121,18 @@ header h3 {
     padding: 0px;
 }
 
-.section1 {
+.ratings {
     padding-left: 60px;
     margin: 0px;
     padding-top: 15px;
     padding-bottom: 30px;
 }
 
-.section1 h2 {
+.ratings h2 {
     padding-bottom: 30px;
 }
 
-.section1 p {
+.ratings p {
     padding-bottom: 20px;
     padding-right: 700px
 }
