@@ -1,9 +1,58 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-family: Verdana;
     text-align: center;
 }
 
-.nav-icon { transition: all 1s ease; } .nav-icon:hover { transform: scale(.9); }
+@media only screen and (max-width: 600px) {
+    .course-card {
+        transition: none;
+    }
+}
+
+.nav-icon {
+    transition: all 1s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(.9);
+}
+
+.marketing {
+    transition: all 0.3s ease;
+}
+
+.marketing:hover {
+    transform: translateY(-10px);
+}
+
+.uxui {
+    transition: all 0.3s ease;
+}
+
+.uxui:hover {
+    transform: translateY(-10px);
+}
+
+.webdev {
+    transition: all 0.3s ease;
+}
+
+.webdev:hover {
+    transform: translateY(-10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.cube { perspective: 400px; } .cube:hover { transform: rotateX(20deg) rotateY(20deg); }
 
 body {
     font-family: Verdana;
@@ -48,20 +97,20 @@ button:hover {
     padding-bottom: 30px;
 }
 
-.courseTitle{
+.courseTitle {
     text-align: center;
     padding-bottom: 20px;
 }
 
-.marketing{
+.marketing {
     padding-left: 60px;
 }
 
-.webdev{
+.webdev {
     padding-left: 370px;
 }
 
-.uxui{
+.uxui {
     padding-left: 300px;
 }
 
