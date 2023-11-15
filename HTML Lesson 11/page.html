@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="style.css">
     <title>Robotics</title>
 </head>
 
-<body>
+<body class="body">
     <header>
         <h1>Robotics for Beginners: Building Your First Bot</h1>
 
@@ -21,13 +21,6 @@
             <input type="submit" value="Login">
         </div>
     </header>
-
-    <div class="sidebar">
-        <ul>
-            <li><a href="#"><i class="fas link"></i></a></li>
-        </ul>
-
-    </div>
 
     <h2 class="coursesTitle">All Courses</h2>
 
@@ -48,17 +41,19 @@
         <div class="uxui" class="courseCard">
             <h2 class="courseTitle">UX/UI Design</h2>
             <img src="https://images.unsplash.com/photo-1576595580361-90a855b84b20?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="uxImage">
+                class="uxImage" id="ratings">
         </div>
 
     </section>
 
-    <nav class="nav-icon">
-        <a href="#courseDashboard">Dashboard</a>
-        <a href="#ratings">Ratings</a>
-    </nav>
+    <div class="sidenav">
+        <a href="#top" id="dashSide">Dashboard</a>
+        <a href="#ratings" id="rateSide">Ratings</a>
+        <a href="#modules" id="modSide">Modules</a>
+        <a href="#faq" id="faqSide">FAQs</a>
+    </div>
 
-    <section class="ratings" id="ratings">
+    <section class="ratings">
         <h2>Course Rating and Reviews</h2>
 
         <p class="person">John R. ⭐⭐⭐⭐</p>
@@ -99,7 +94,7 @@
 
     <section2 class="section2">
 
-        <h2 class="courseprogress">Course Progress</h2>
+        <h2 class="courseprogress" id="modules">Course Progress</h2>
 
         <progress value="25" max="100" class="progress"></progress>
 
@@ -147,16 +142,18 @@
         </ol>
     </section2>
 
-    <br>
-    <br>
-    <br>
+    <h2 class="cubeTitle">Reasons and Benefits of taking Robotics</h2>
 
-    <img src="https://woz-u.com/wp-content/uploads/2022/06/Evolution-of-Coding-scaled.jpg" alt="Coding Image"
-        width="600" height="300" class="codeImg">
-
-    <br>
-    <br>
-    <br>
+    <div id="stage" style="width: 120px; height: 120px;">
+        <div class="spinner">
+            <div class="face1">Innovative</div>
+            <div class="face2">Automated</div>
+            <div class="face3">Relevant</div>
+            <div class="face4">Intelligent</div>
+            <div class="face5">Mechanical</div>
+            <div class="face6">Precise</div>
+        </div>
+    </div>
 
     <!--This section of the page holds the FAQ dropdowns for the users to read-->
 

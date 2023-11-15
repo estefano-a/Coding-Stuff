@@ -13,6 +13,8 @@ h1 {
     }
 }
 
+
+
 .nav-icon {
     transition: all 1s ease;
 }
@@ -45,14 +47,173 @@ h1 {
     transform: translateY(-10px);
 }
 
+#stage {
+    width: 120px;
+    height: 120px;
+    position: relative; /* To position the spinner */
+    padding-left: 815px;
+}
+
+#stage:hover .spinner {
+    animation: spincube 12s ease-in-out;}
+
+.spinner div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 120px;
+    font-size: 20px;
+}
+
+.spinner .face1 { 
+    transform: translateZ(60px);
+}
+.spinner .face2 { 
+    transform: rotateY(90deg) translateZ(60px); 
+}
+.spinner .face3 { 
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px); 
+}
+.spinner .face4 { 
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); 
+}
+.spinner .face5 { 
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); 
+}
+.spinner .face6 { 
+    transform: rotateX(-90deg) translateZ(60px); 
+}
+
+.spinner {
+    transform-style: preserve-3d;
+    transform-origin: 60px 60px 0;
+}
+
+@keyframes spincube {
+    16%      { transform: rotateY(-90deg); }
+    33%      { transform: rotateY(-90deg) rotateZ(90deg); }
+    50%      { transform: rotateY(180deg) rotateZ(90deg); }
+    66%      { transform: rotateY(90deg) rotateX(90deg); }
+    83%      { transform: rotateX(90deg); }
+}
+
+.body {
+    margin-left: 160px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#dashSide {
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#dashSide:hover {
+    color: #cc745a;
+    /* Color when hovered */
+    animation: pulse 0.5s infinite alternate;
+}
+
+#rateSide {
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#rateSide:hover {
+    color: #cc745a;
+    /* Color when hovered */
+    animation: pulse 0.5s infinite alternate;
+}
+
+#modSide {
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#modSide:hover {
+    color: #cc745a;
+    /* Color when hovered */
+    animation: pulse 0.5s infinite alternate;
+}
+
+#faqSide {
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#faqSide:hover {
+    color: #cc745a;
+    /* Color when hovered */
+    animation: pulse 0.5s infinite alternate;
+}
+
+.sidenav {
+    height: 100%;
+    /* Full-height: remove this if you want "auto" height */
+    width: 160px;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #30455c;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    * {
+    .body {
         animation: none !important;
         transition: none !important;
     }
 }
-
-.cube { perspective: 400px; } .cube:hover { transform: rotateX(20deg) rotateY(20deg); }
 
 body {
     font-family: Verdana;
@@ -74,7 +235,7 @@ header {
 }
 
 .loginText {
-    padding-left: 450px;
+    padding-left: 253px;
     padding-top: 50px;
 }
 
@@ -107,11 +268,11 @@ button:hover {
 }
 
 .webdev {
-    padding-left: 370px;
+    padding-left: 280px;
 }
 
 .uxui {
-    padding-left: 300px;
+    padding-left: 250px;
 }
 
 .courseDashboard {
@@ -136,24 +297,6 @@ button:hover {
     height: 245px;
     margin: auto;
 }
-
-.codeImg {
-    transition:
-        width 3s,
-        height 3s;
-}
-
-.codeImg:hover {
-    width: 800px;
-    height: 500px;
-}
-
-/*.starrating{
-    width: 100px;
-    height: 20px;
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F611574824396855597%2F&psig=AOvVaw0M6U7V-dT9VdgpFsTGHc9H&ust=1697837171057000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCNitqb6Gg4IDFQAAAAAdAAAAABAD");
-    display:inline-block;
-}*/
 
 header h1 {
     padding: 40px;
@@ -194,6 +337,12 @@ header h3 {
     padding-left: 60px;
     padding-top: 30px;
     padding-bottom: 15px;
+}
+
+.cubeTitle{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 45px;
 }
 
 .rasbpi {
@@ -243,11 +392,7 @@ header h3 {
     padding-top: 20px;
 }
 
-.codeImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .section3 h2 {
     padding-left: 60px;
