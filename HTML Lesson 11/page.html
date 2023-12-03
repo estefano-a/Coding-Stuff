@@ -50,6 +50,7 @@
         <a href="#top" id="dashSide">Dashboard</a>
         <a href="#ratings" id="rateSide">Ratings</a>
         <a href="#modules" id="modSide">Modules</a>
+        <a href="#quiz" id="quizSide">Quiz</a>
         <a href="#cubeTitle" id="faqSide">FAQs</a>
     </div>
 
@@ -134,13 +135,23 @@
             <figure>
                 <img src="https://www.therobotreport.com/wp-content/uploads/2020/01/Robot-Arm-002-scaled.jpg"
                     alt="robotDesign" width="500" class="robotarm">
-                <figcaption class="robotarmcap">This is an example of a design of a robotic arm.</figcaption>
+                <figcaption class="robotarmcap" id="quiz">This is an example of a design of a robotic arm.</figcaption>
             </figure>
             <li>Future of Robotics: Trends and Career Opportunities</li>
             <P>Advanced robotics and AI integration, ethical considerations in robotics and potential career paths and
                 further learning resources.</P>
         </ol>
     </section2>
+
+    <section class="quiz">
+        <h2>Quiz for understanding</h2>
+        <div id="quiz-container">
+            <div id="question"></div>
+            <ul id="answer-list"></ul>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+            <div id="result" class="result"></div>
+        </div>
+    </section>
 
     <h2 class="cubeTitle" id="cubeTitle">Reasons and Benefits of taking Robotics</h2>
 
@@ -282,6 +293,9 @@
             </form>
         </div>
     </footer>
+    <script src="index.js">
+        
+    </script>
 </body>
 
 </html>

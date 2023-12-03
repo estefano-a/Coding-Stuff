@@ -184,6 +184,18 @@ h1 {
     animation: pulse 0.5s infinite alternate;
 }
 
+#quizSide {
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#quizSide:hover {
+    color: #cc745a;
+    
+    animation: pulse 0.5s infinite alternate;
+}
+
 .sidenav {
     height: 100%;
     width: 160px;
@@ -405,7 +417,39 @@ header h3 {
     padding-top: 20px;
 }
 
+.quiz{
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
 
+#answer-list li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    width: 500px;
+}
+
+#answer-list li.correct {
+    background-color: lightgreen;
+}
+
+#answer-list li.incorrect {
+    background-color: lightcoral;
+}
+
+#next-button {
+    margin-top: 20px;
+    margin-left: 245px;
+    width: 60px;
+}
+
+#question{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .section3 h2 {
     padding-left: 60px;
