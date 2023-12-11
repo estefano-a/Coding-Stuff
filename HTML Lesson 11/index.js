@@ -28,6 +28,80 @@ const questions = [
     }
 ];
 
+async function loadQuestions() {
+    try {
+        const response = await fetch('questions.json');
+        const data = await response.json();
+        questions = data.questions; 
+    } catch (error) {
+        console.error("Error loading questions:", error);
+    }
+}
+
+async function initQuiz() {
+    await loadQuestions();
+    if (questions.length === 0) {
+        return;
+    }
+    displayQuestion();
+}
+
+initQuiz();
+
+let timer;
+let timeLeft = 30;
+
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay();
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            resetTimer(timer);
+            nextQuestion();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    document.getElementById("timer").textContent = timeLeft;
+}
+
+function stopTimer() {
+    clearInterval(timer);
+}
+
+function resetTimer() {
+    timeLeft = 30; 
+}
+
+function saveProgress() {
+    localStorage.setItem('quizProgress', JSON.stringify({ currentQuestionIndex, score }));
+}
+
+function loadProgress() {
+    const progress = JSON.parse(localStorage.getItem('quizProgress'));
+    if (progress) {
+        currentQuestionIndex = progress.currentQuestionIndex;
+        score = progress.score;
+    }
+}
+
+async function initQuiz() {
+    await loadQuestions();
+    loadProgress(); 
+}
+
+document.getElementById("startButton").addEventListener("click", function() {
+    startTimer();
+});
+
+startButton.addEventListener('click', function() {
+
+    startButton.style.display = 'none';
+});
+
 function displayQuestion() {
     const question = questions[currentQuestionIndex];
     document.getElementById("question").textContent = question.question;
@@ -59,9 +133,8 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
-        document.getElementById("quiz-container").innerHTML = `<h1>Your score: ${score}/${questions.length}</h1>`;
+        document.getElementById("quiz-container").innerHTML = `<h1 class="result">Your score: ${score}/${questions.length}</h1>`;
     }
 }
 
-// Start the quiz
 displayQuestion();

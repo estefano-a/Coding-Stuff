@@ -1,0 +1,29 @@
+{
+    "questions": [
+        {
+            "question": "What does the term 'AI' stand for in the context of robotics?",
+            "answers": ["Advanced Intelligence", "Artificial Insight", "Automated Interaction", "Artificial Intelligence"],
+            "correct": 3
+        },
+        {
+            "question": "Which programming language is commonly used in robotics development?",
+            "answers": ["Java", "Python", "C++", "Ruby"],
+            "correct": 1
+        },
+        {
+            "question": "What does the acronym 'ROS' stand for in robotics?",
+            "answers": ["Robotic Operating System", "Realistic Object Simulation", "Robust Object Sensing", "Responsive Orientation System"],
+            "correct": 0
+        },
+        {
+            "question": "Which sensor is commonly used in robotics for distance measurement?",
+            "answers": ["Gyroscope", "Accelerometer", "LIDAR", "Thermocouple"],
+            "correct": 2
+        },
+        {
+            "question": "What is the purpose of a robotic manipulator in industrial robotics?",
+            "answers": ["Visual Perception", "Object Grasping and Manipulation", "Speech Recognition", "Motion Planning and Control"],
+            "correct": 1
+        }
+    ]
+}
