@@ -1,38 +1,14 @@
 let currentQuestionIndex = 0;
 let score = 0;
-const questions = [
-    {
-        question: "What does the term 'AI' stand for in the context of robotics?",
-        answers: ["A) Advanced Intelligence", "B) Artificial Insight", "C) Automated Interaction", "D) Artificial Intelligence"],
-        correct: 3
-    },
-    {
-        question: "Which programming language is commonly used in robotics development?",
-        answers: ["A) Java", "B) Python", "C) C++", "D) Ruby"],
-        correct: 2
-    },
-    {
-        question: "What does the acronym 'ROS' stand for in robotics?",
-        answers: ["A) Robotic Operating System", "B) Realistic Object Simulation", "C) Robust Object Sensing", "D) Responsive Orientation System"],
-        correct: 0
-    },
-    {
-        question: "Which sensor is commonly used in robotics for distance measurement?",
-        answers: ["A) Gyroscope", "B) Accelerometer", "C) LIDAR", "D) Thermocouple"],
-        correct: 2
-    },
-    {
-        question: "What is the purpose of a robotic manipulator in industrial robotics?",
-        answers: ["A) Visual Perception", "B) Object Grasping and Manipulation", "C) Speech Recognition", "D) Motion Planning and Control"],
-        correct: 1
-    }
-];
+let questions = [];
+let timer;
+let timeLeft = 30;
 
 async function loadQuestions() {
     try {
         const response = await fetch('questions.json');
         const data = await response.json();
-        questions = data.questions; 
+        questions = data.questions;
     } catch (error) {
         console.error("Error loading questions:", error);
     }
@@ -40,16 +16,12 @@ async function loadQuestions() {
 
 async function initQuiz() {
     await loadQuestions();
+    loadProgress();
     if (questions.length === 0) {
         return;
     }
-    displayQuestion();
+    displayQuestion(); // Optionally start the quiz here or wait for a button click
 }
-
-initQuiz();
-
-let timer;
-let timeLeft = 30;
 
 function startTimer() {
     timer = setInterval(() => {
@@ -58,7 +30,7 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
-            resetTimer(timer);
+            resetTimer();
             nextQuestion();
         }
     }, 1000);
@@ -73,7 +45,7 @@ function stopTimer() {
 }
 
 function resetTimer() {
-    timeLeft = 30; 
+    timeLeft = 30;
 }
 
 function saveProgress() {
@@ -88,19 +60,15 @@ function loadProgress() {
     }
 }
 
-async function initQuiz() {
-    await loadQuestions();
-    loadProgress(); 
-}
-
 document.getElementById("startButton").addEventListener("click", function() {
+    startQuiz();
+});
+
+function startQuiz() {
+    document.getElementById("startButton").style.display = 'none';
     startTimer();
-});
-
-startButton.addEventListener('click', function() {
-
-    startButton.style.display = 'none';
-});
+    displayQuestion();
+}
 
 function displayQuestion() {
     const question = questions[currentQuestionIndex];
@@ -126,6 +94,7 @@ function selectAnswer(index) {
         selectedAnswer.classList.add("incorrect");
     }
     document.querySelectorAll("#answer-list li").forEach(li => li.onclick = null);
+    setTimeout(nextQuestion, 1000); // Add a delay before next question
 }
 
 function nextQuestion() {
@@ -133,8 +102,16 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
+        stopTimer(); // Stop the timer
+        hideTimer(); // Hide the timer display
         document.getElementById("quiz-container").innerHTML = `<h1 class="result">Your score: ${score}/${questions.length}</h1>`;
     }
 }
 
-displayQuestion();
+function hideTimer() {
+    document.getElementById("timer").style.display = 'none';
+}
+
+
+// Initialize the quiz
+initQuiz();
