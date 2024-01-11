@@ -1,0 +1,5 @@
+[
+    {"id": "marketing", "name": "Marketing"},
+    {"id": "webdev", "name": "Web Development"},
+    {"id": "uxui", "name": "UX/UI Design"}
+]
