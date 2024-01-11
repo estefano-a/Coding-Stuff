@@ -67,8 +67,7 @@
 
     function populateCourses() {
         const courseSelect = document.getElementById('course');
-
-        // Replace this URL with the actual URL to fetch courses
+        
         fetch('response.json')
         .then(response => response.json())
         .then(courses => {
