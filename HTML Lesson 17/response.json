@@ -1,5 +1,5 @@
 [
-    {"id": "marketing", "name": "Marketing"},
-    {"id": "webdev", "name": "Web Development"},
-    {"id": "uxui", "name": "UX/UI Design"}
+    {"id": "canada", "name": "Canada"},
+    {"id": "us", "name": "United States"},
+    {"id": "mexico", "name": "Mexico"}
 ]

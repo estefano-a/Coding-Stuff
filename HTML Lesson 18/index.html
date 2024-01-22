@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Updater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Profile Updater</h1>
+
+    <div class="container">
+        <form id="form">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+            </select>
+
+            <label for="bio">Bio</label>
+            <input type="text" id="bio" name="bio" placeholder="Type your bio here...">
+
+            <input type="submit" value="Submit" id="submitButton">
+
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const form = document.getElementById('form')
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const payload = new FormData(form);
+
+                try {
+                    const res = await fetch('http://httpbin.org/post', {
+                        method: "POST",
+                        body: payload,
+                    });
+
+                    if (res.ok) {
+                        const data = await res.json();
+                        alert('Profile Updated Successfully');
+                        console.log(data);
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
+                } catch (err) {
+                    console.log(err);
+                    alert('Failed to update profile');
+                }
+            });
+
+            async function populateGenders() {
+                const genderSelect = document.getElementById('gender');
+
+                try {
+                    const response = await fetch('response.json');
+                    const genders = await response.json();
+
+                    genders.forEach(gender => {
+                        const option = document.createElement('option');
+                        option.value = gender.id;
+                        option.textContent = gender.name;
+                        genderSelect.appendChild(option);
+                    });
+                } catch (error) {
+                    console.error('Error fetching genders:', error);
+                }
+            }
+
+            populateGenders();
+        });
+    </script>
+</body>
+
+</html>
