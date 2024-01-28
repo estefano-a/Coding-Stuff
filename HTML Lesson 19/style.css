@@ -1,0 +1,222 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: Verdana;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .course-card {
+        transition: none;
+    }
+}
+
+.forumTitle {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.forumPostsTitleMarket {
+    padding-top: 25px;
+}
+
+.forumPostsTitleUxUi {
+    padding-top: 25px;
+}
+
+.forumPostsTitleWebDev {
+    padding-top: 25px;
+}
+
+.marketing,
+.uxui,
+.webdev {
+    transition: all 0.3s ease;
+}
+
+.marketing:hover,
+.uxui:hover,
+.webdev:hover {
+    transform: translateY(-10px);
+}
+
+.body {
+    margin-left: 160px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#dashSide:hover,
+#marketing:hover,
+#uxui:hover,
+#webdev:hover {
+    color: #cc745a;
+    animation: pulse 0.5s infinite alternate;
+}
+
+.forumDashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.forumCard {
+    margin: 10px;
+}
+
+.forumContainer {
+    display: flex;
+    justify-content: space-around;
+    /* Adjust as needed */
+    align-items: flex-start;
+    /* Adjust as needed */
+    flex-wrap: wrap;
+    /* Optional: Allows wrapping of items */
+}
+
+.forumPosts {
+    display: flex;
+    flex-direction: column;
+    /* Aligns items vertically */
+    align-items: flex-start;
+    /* Aligns items to the start of the container */
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #30455c;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .body {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+body {
+    font-family: Verdana;
+    background-color: #eaf0f3;
+}
+
+header {
+    background-color: #30455c;
+    color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+
+.login {
+    margin: 20px;
+    padding: 15px;
+    padding-top: 32px;
+}
+
+.loginText {
+    right: 50px;
+    padding-top: 50px;
+}
+
+input[type="submit"],
+button {
+    background-color: #f59070;
+    color: black;
+    transition: background-color 0.3s ease;
+    outline: 0px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: gray;
+}
+
+.forumPosts,
+.input {
+    padding-left: 60px;
+}
+
+.forumPosts h2 {
+    padding-bottom: 30px;
+}
+
+.forumPosts p {
+    padding-bottom: 20px;
+}
+
+.person {
+    font-weight: bold;
+}
+
+.marketingImage,
+.codingImage,
+.uxImage {
+    width: 350px;
+    height: 245px;
+}
+
+header h1 {
+    padding: 40px;
+}
+
+header h3 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.input {
+    outline-color: black;
+    transition: outline-color 50ms;
+}
+
+.input:focus {
+    outline-color: #4285F4;
+}
